@@ -1,0 +1,33 @@
+{
+  "name": "local-hls-video-mvp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n server,web -c cyan,magenta \"node --watch apps/server/src/server.js\" \"next dev apps/web\"",
+    "build": "next build apps/web",
+    "start": "concurrently -n server,web -c cyan,magenta \"node apps/server/src/server.js\" \"next start apps/web\"",
+    "test": "vitest run",
+    "test:unit": "vitest run test/unit",
+    "test:integration": "vitest run test/integration",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "hls.js": "1.6.13",
+    "multer": "^2.0.1",
+    "next": "15.5.28",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "caniuse-lite": "1.0.30001819",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.5.4",
+    "supertest": "^7.1.1",
+    "tailwindcss": "^3.4.17",
+    "vitest": "^3.2.4"
+  }
+}

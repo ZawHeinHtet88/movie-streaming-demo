@@ -1,0 +1,11 @@
+node_modules/
+.next/
+coverage/
+.env
+.env.local
+storage/uploads/*
+storage/videos/*
+!storage/uploads/.gitkeep
+!storage/videos/.gitkeep
+npm-debug.log*
+.DS_Store
